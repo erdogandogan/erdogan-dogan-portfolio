@@ -1,26 +1,63 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #09090b;
+  --background-elevated: #111113;
+  --foreground: #f4f4f5;
+  --foreground-muted: #a1a1aa;
+  --border: #27272a;
+  /* Vurgu ailesi: mor. --accent metin/ikon/border gibi koyu zemin üzerindeki
+     kullanımlar için (violet-500, ~4.7:1 kontrast - WCAG AA geçer).
+     --accent-strong dolu yüzeyler için (violet-600, buton zemini, hero gradyanı).
+     --accent-active --accent-strong üzerine hover/active durumu (violet-700).
+     Temayı değiştirmek için sadece bu dört satırı güncellemek yeterli. */
+  --accent: #8b5cf6;
+  --accent-strong: #7c3aed;
+  --accent-active: #6d28d9;
+  --accent-foreground: #f5f3ff;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-elevated: var(--background-elevated);
   --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-active: var(--accent-active);
+  --color-accent-foreground: var(--accent-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: var(--accent-strong);
+  color: var(--accent-foreground);
+}
+
+@keyframes cursor-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-cursor-blink {
+  animation: cursor-blink 1s steps(1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-cursor-blink {
+    animation: none;
+  }
 }
