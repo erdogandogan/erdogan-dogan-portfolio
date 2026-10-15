@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Erdoğan Doğan CV</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; }
+  body {
+    width: 595.92pt; height: 842.88pt; overflow: hidden;
+    padding: 32.4pt 53.7pt 0 54pt;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: #1a1a1a; font-size: 9.1pt; line-height: 1.07;
+  }
+  h1 { font-size: 22pt; line-height: 1.0; font-weight: 700; letter-spacing: 0; }
+  .role { color: #b8792e; font-size: 11.5pt; margin-top: 1.2pt; line-height: 1.15; }
+  .contact { color: #4a4a4a; font-size: 9.3pt; margin-top: 3.6pt; padding-bottom: 3pt; border-bottom: .75pt solid #1a1a1a; }
+  h2 {
+    font-size: 10.5pt; font-weight: 700; letter-spacing: .4pt; line-height: 1.15;
+    padding-bottom: 3.2pt; border-bottom: .75pt solid #b8792e; margin-top: 1.6pt; margin-bottom: 3.3pt;
+  }
+  .contact + h2 { margin-top: 3.4pt; }
+  .profile { line-height: 1.045; }
+  table.skills { border-collapse: collapse; width: 100%; font-size: 9.3pt; margin-left: 8.4pt; }
+  table.skills td { vertical-align: top; padding: 0 0 2pt 0; line-height: 1.04; }
+  table.skills td:first-child { width: 109.6pt; font-weight: 700; padding-right: 4pt; }
+  table.skills td:last-child { color: #4a4a4a; padding-right: 22pt; }
+  .proj { margin-top: 2.8pt; }
+  .proj:first-of-type { margin-top: 0; }
+  .proj h3 { font-size: 9.4pt; font-weight: 700; line-height: 1.15; }
+  .proj .sub { color: #b8792e; font-style: italic; font-size: 8pt; line-height: 1.15; }
+  .proj ul { list-style: none; margin-top: 1.4pt; }
+  .proj li { font-size: 8.6pt; line-height: 1.08; padding-left: 10pt; position: relative; margin-bottom: .2pt; }
+  .proj li::before { content: "–"; position: absolute; left: 0; }
+  .tech { color: #4a4a4a; font-style: italic; font-size: 7.9pt; margin-top: 2.2pt; line-height: 1.15; }
+  .other { line-height: 1.045; }
+  .edu { display: flex; font-size: 9.1pt; line-height: 1.07; }
+  .edu .l { width: 254.5pt; margin-left: 8.4pt; }
+  .edu .r { flex: 1; }
+  .muted { color: #4a4a4a; }
+  .cert { margin-top: 2.6pt; }
+  .cert .meta { color: #4a4a4a; }
+</style>
+</head>
+<body>
+  <h1>ERDOĞAN DOĞAN</h1>
+  <div class="role">Full-Stack Developer &amp; AI Automation</div>
+  <div class="contact">Kayseri, Türkiye • 0531 424 12 97 • erdoganned@gmail.com • github.com/erdogandogan</div>
+
+  <h2>PROFİL</h2>
+  <p class="profile">Uçtan uca yazılım geliştirme deneyimine sahip Bilgisayar Mühendisliği öğrencisi. API güvenliği, IoT veri mimarileri, yapay zekâ entegrasyonları ve mobil uygulama geliştirme alanlarında bitirme ve bireysel projeler üretti; freelance ve aile işletmesi projelerinde gerçek müşteriler için canlı web siteleri geliştirdi. .NET, Next.js, React Native ve Flutter ile backend, web ve mobil katmanlarda çalışabilen, şu sıralar AI destekli otomasyon sistemlerine odaklanan bir yazılım geliştirici.</p>
+
+  <h2>TEKNİK YETENEKLER</h2>
+  <table class="skills">
+    <tr><td>Diller &amp; Framework</td><td>C# (.NET 8 / ASP.NET Core), TypeScript/JavaScript (Next.js, React, React Native), Python, Dart (Flutter/Flame)</td></tr>
+    <tr><td>Veri Yönetimi</td><td>PostgreSQL, MSSQL, SQL Server, InfluxDB 2.x (zaman serisi)</td></tr>
+    <tr><td>Yapay Zekâ &amp; Entegrasyon</td><td>OpenAI API, Ollama &amp; Qwen2.5 (yerel LLM), Shopier API, Google/Spotify OAuth 2.0</td></tr>
+    <tr><td>IoT &amp; Protokoller</td><td>ESP32, MQTT, Kalman Filtreleme</td></tr>
+    <tr><td>Diğer</td><td>RESTful API tasarımı, JWT Authentication, Git/GitHub, Swagger/OpenAPI</td></tr>
+  </table>
+
+  <h2>ÖNE ÇIKAN PROJELER</h2>
+
+  <div class="proj">
+    <h3>API Insight Studio — Bitirme Projesi</h3>
+    <ul>
+      <li>OpenAPI/Swagger tabanlı API'leri analiz eden, test eden ve otomatik belgeleyen çok platformlu (masaüstü ve web) bir sistem tasarladı ve geliştirdi.</li>
+      <li>BOLA (Broken Object Level Authorization) başta olmak üzere API güvenlik açıklarını otomatik tespit eden algoritmalar devreye aldı.</li>
+      <li>Ollama &amp; Qwen2.5 yerel yapay zekâ modellerini sisteme entegre ederek otomatik test senaryosu ve dinamik dokümantasyon üretimi sağladı.</li>
+    </ul>
+    <div class="tech">Teknolojiler: .NET 8 ASP.NET Core, Next.js, Electron, PostgreSQL/MSSQL, Ollama</div>
+  </div>
+
+  <div class="proj">
+    <h3>Park Mağaza · E-Ticaret Sitesi — Müşteri Projesi</h3>
+    <div class="sub">Aile işletmesi — canlı web sitesi</div>
+    <ul>
+      <li>Instagram → parkmagaza.com.tr → Shopier üç adımlı bir satış hunisi tasarladı; ara domain katmanını Meta Pixel tetikleme ve Google indeksleme için stratejik olarak korudu.</li>
+      <li>Next.js 14, Tailwind CSS ve Framer Motion ile ürün kataloğu ve vitrin sitesini uçtan uca geliştirip Vercel'e deploy etti; Shopier ödeme/checkout entegrasyonu ve API tabanlı stok senkronizasyonu üzerine çalıştı.</li>
+    </ul>
+    <div class="tech">Teknolojiler: Next.js 14, Tailwind CSS, Framer Motion, Vercel, Shopier API, AppSheet/Google Sheets</div>
+  </div>
+
+  <div class="proj">
+    <h3>Pralin Chocolatier &amp; Coffee — Müşteri Projesi</h3>
+    <div class="sub">Freelance — canlı web sitesi</div>
+    <ul>
+      <li>Butik bir çikolatacı/kafe markası için editoryal-lüks estetikte, uçtan uca bir web sitesi geliştirdi.</li>
+      <li>Menü verilerini harici bir API ile senkronize eden entegrasyon ve özel animasyon detayları uyguladı.</li>
+    </ul>
+    <div class="tech">Teknolojiler: Next.js, TypeScript, Tailwind CSS, Framer Motion, Vercel</div>
+  </div>
+
+  <div class="proj">
+    <h3>Çağrıhan Akademi — Müşteri Projesi</h3>
+    <div class="sub">Freelance — canlı web sitesi</div>
+    <ul>
+      <li>YKS sınavına hazırlık amaçlı, üyelik bazlı bir çalışma alanı için marka sitesi geliştirdi.</li>
+      <li>Özel tipografi ve tasarım sistemi kurarak markanın konumlandırmasını web'e taşıdı.</li>
+    </ul>
+    <div class="tech">Teknolojiler: Next.js, TypeScript, Tailwind CSS, Vercel</div>
+  </div>
+
+  <div class="proj">
+    <h3>Giyilebilir Sağlık İzleme Sistemi — Wearable Health Monitoring System</h3>
+    <ul>
+      <li>ESP32 tabanlı bir IoT mimarisiyle kalp atış hızı, SpO2 ve adım sayısı verilerini gerçek zamanlı topladı; Kalman Filtresi ile sensör gürültüsünü azalttı.</li>
+      <li>MQTT ile düşük gecikmeli veri aktarımı, InfluxDB 2.x zaman serisi veritabanı ve verileri izleyen bir React Native mobil uygulaması geliştirdi.</li>
+    </ul>
+    <div class="tech">Teknolojiler: ESP32, MQTT, InfluxDB 2.x, Kalman Filtresi, React Native</div>
+  </div>
+
+  <div class="proj">
+    <h3>AI Destekli YouTube Playlist Oluşturucu</h3>
+    <ul>
+      <li>Ruh hali/temaya göre OpenAI API ile şarkı listesi üreten, YouTube Data API v3 ile eşleştiren ve Google OAuth 2.0 ile playliste doğrudan aktaran uçtan uca bir web uygulaması geliştirdi.</li>
+    </ul>
+    <div class="tech">Teknolojiler: Next.js, React, TypeScript, Tailwind CSS, OpenAI API, YouTube Data API v3</div>
+  </div>
+
+  <div class="proj">
+    <h3>Short Stick Game — Çok Oyunculu Mobil Uygulama</h3>
+    <ul>
+      <li>JWT tabanlı kimlik doğrulama ve RESTful API üzerinden oyun oluşturma/davet/katılma akışlarını yöneten çok oyunculu bir mobil uygulama geliştirdi.</li>
+    </ul>
+    <div class="tech">Teknolojiler: React Native, ASP.NET Core Web API, C#, SQL Server, JWT</div>
+  </div>
+
+  <h2>DİĞER PROJELER &amp; AKADEMİK ÇALIŞMALAR</h2>
+  <p class="other">Endless Runner (Flutter &amp; Flame) — çift zıplama, kalkan güçlendirmesi ve dinamik zorluk seviyeli 2D oyun. • Satış Geliri Tahminleme Modeli — Kaggle Superstore veri setinde Regresyon ve SARIMA ile satış trendi tahmini (Python). • Coati Optimization Algorithm İncelemesi — metasezgisel bir optimizasyon algoritmasının matematiksel modeli ve sözde kod analizi. • IoT'de Büyük Veri Analitiği — Journal of Big Data (2025) kapsamındaki bir makale üzerine teknik analiz ve sunum. • Çiçekçiler için Web Sitesi — küçük çiçekçi işletmeleri için ürün vitrini ve sipariş akışı içeren, markalara uyarlanabilir bir demo site (Next.js, Tailwind CSS).</p>
+
+  <h2>EĞİTİM, SERTİFİKA &amp; DİLLER</h2>
+  <div class="edu">
+    <div class="l">
+      <div>Kayseri Üniversitesi — Bilgisayar Mühendisliği (Lisans)</div>
+      <div class="muted">2022 – Devam Ediyor</div>
+      <div class="cert"><a href="https://coursera.org/verify/professional-cert/ZI0ZP6IZCBOL" style="color:inherit;text-decoration:none">IBM Back-End Development Professional Certificate</a></div>
+      <div class="meta">IBM · Coursera · Ekim 2026 · 11 kurs</div>
+    </div>
+    <div class="r">
+      <div>Türkçe: Anadil</div>
+      <div>İngilizce: Profesyonel çalışma yetkinliği (akademik makale analizi ve teknik dokümantasyon takibi)</div>
+    </div>
+  </div>
+</body>
+</html>
