@@ -176,6 +176,17 @@ export const education = {
   period: "2022 - Devam Ediyor",
 };
 
+export const certifications = [
+  {
+    title: "IBM Back-End Development Professional Certificate",
+    issuer: "IBM · Coursera",
+    date: "Ekim 2026",
+    detail:
+      "11 kurslu program: Python, Django, SQL, Docker, Kubernetes ve OpenShift, mikroservisler ve serverless, uygulama güvenliği, izleme ve gözlemlenebilirlik.",
+    verifyUrl: "https://coursera.org/verify/professional-cert/ZI0ZP6IZCBOL",
+  },
+];
+
 export const contact = {
   email: "erdoganned@gmail.com",
   phone: "0531 424 12 97",
