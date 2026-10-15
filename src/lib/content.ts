@@ -27,7 +27,7 @@ export const hero = {
 export const about = {
   heading: "Hakkımda",
   paragraph:
-    "Kayseri Üniversitesi'nde Bilgisayar Mühendisliği okuyorum ve uçtan uca yazılım geliştirme deneyimine sahibim. Backend'de .NET / ASP.NET Core, web tarafında Next.js/React, mobilde React Native ve Flutter ile çalışıyorum. Bitirme projemde API güvenliği ve yerel yapay zekâ modelleri (Ollama, Qwen2.5) üzerine yoğunlaştım; freelance olarak da gerçek müşteriler için canlı web siteleri geliştirdim. Şu anda ilgi alanımı AI destekli otomasyon sistemlerine doğru genişletiyorum.",
+    "Kayseri Üniversitesi'nde Bilgisayar Mühendisliği okuyorum ve uçtan uca yazılım geliştirme deneyimine sahibim. Backend'de .NET / ASP.NET Core, web tarafında Next.js/React, mobilde React Native ve Flutter ile çalışıyorum. Bitirme projemde API güvenliği ve yerel yapay zekâ modelleri (Ollama, Qwen2.5) üzerine yoğunlaştım ve onu, yapay zekâyı insan onayı ve denetim izi ile otomasyon akışına bağlayan bir sisteme dönüştürdüm; freelance olarak da gerçek müşteriler için canlı web siteleri geliştirdim. Şu anda ilgi alanımı AI destekli otomasyon sistemlerine doğru genişletiyorum.",
   focus: {
     label: "Yöneldiğim Alan",
     title: "AI Destekli Müşteri Otomasyonları",
@@ -41,6 +41,8 @@ export type Project = {
   title: string;
   featured?: boolean;
   badge?: string;
+  /** Kartta gösterilen sürüm etiketi; verilmezse "v1.0". */
+  version?: string;
   status?: string;
   bullets: string[];
   tech: string[];
@@ -54,12 +56,15 @@ export const projects: Project[] = [
     title: "API Insight Studio",
     featured: true,
     badge: "Bitirme Projesi · Vitrin Proje",
+    version: "v2.0",
+    repoUrl: "https://github.com/erdogandogan/ApiInsightStudio",
     bullets: [
-      "OpenAPI/Swagger tabanlı API'leri analiz eden, test eden ve otomatik belgeleyen çok platformlu (masaüstü + web) sistem.",
-      "BOLA (Broken Object Level Authorization) dahil API güvenlik açıklarını otomatik tespit eden algoritmalar.",
-      "Ollama ve Qwen2.5 yerel LLM entegrasyonu ile otomatik test senaryosu ve dinamik dokümantasyon üretimi.",
+      "OpenAPI/Swagger dokümanlarını kurallarla puanlayan, uyarıları imzalı webhook ve Telegram ile bildiren ve test senaryolarını hedef API'ye karşı güvenle çalıştıran sistem (web + isteğe bağlı masaüstü).",
+      "Yerel LLM (Ollama, Qwen2.5) yalnızca taslak açıklama yazar; taslak bir insan onaylamadan yayımlanmaz. Her adım, değişiklik yapılırsa anlaşılan hash zincirli bir denetim izine yazılır.",
+      "Güvenlik: SSRF koruması (bağlantı anında IP doğrulama), HMAC imzalı webhook, şifreli sır saklama, sahiplik kontrolü (BOLA/IDOR). Güvenilirlik: outbox tabanlı olaylar, yeniden deneme, atomik onay.",
+      "Ölçüldü: kural motoru elle hesaplanmış 29 örnekte 29/29 (gerçek dünya uyumu 23/29, zayıflıkları belgelendi); iki yerel modelin biçim doğruluğu karşılaştırıldı (qwen2.5:7b %74, 3b %80). 782 test.",
     ],
-    tech: [".NET 8", "ASP.NET Core", "Next.js", "Electron", "PostgreSQL/MSSQL", "Ollama"],
+    tech: [".NET 8", "ASP.NET Core", "SQL Server", "Next.js", "Electron", "Ollama", "xUnit"],
   },
   {
     slug: "park-magaza",
@@ -158,7 +163,7 @@ export const skillGroups = [
   },
   {
     heading: "AI & Entegrasyon",
-    items: ["OpenAI API", "Ollama & Qwen2.5 (yerel LLM)", "Google/Spotify OAuth 2.0"],
+    items: ["OpenAI API", "Ollama & Qwen2.5 (yerel LLM)", "İnsan onaylı AI akışları", "Webhook (HMAC) & Telegram Bot API", "Google/Spotify OAuth 2.0"],
   },
   {
     heading: "IoT & Protokoller",
@@ -166,7 +171,7 @@ export const skillGroups = [
   },
   {
     heading: "Diğer",
-    items: ["RESTful API tasarımı", "JWT Authentication", "Git/GitHub", "Swagger/OpenAPI"],
+    items: ["RESTful API tasarımı", "JWT Authentication", "Git/GitHub", "Swagger/OpenAPI", "xUnit (birim ve entegrasyon testi)"],
   },
 ];
 

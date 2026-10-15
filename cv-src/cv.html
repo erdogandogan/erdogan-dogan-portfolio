@@ -55,7 +55,7 @@
   <table class="skills">
     <tr><td>Diller &amp; Framework</td><td>C# (.NET 8 / ASP.NET Core), TypeScript/JavaScript (Next.js, React, React Native), Python, Dart (Flutter/Flame)</td></tr>
     <tr><td>Veri Yönetimi</td><td>PostgreSQL, MSSQL, SQL Server, InfluxDB 2.x (zaman serisi)</td></tr>
-    <tr><td>Yapay Zekâ &amp; Entegrasyon</td><td>OpenAI API, Ollama &amp; Qwen2.5 (yerel LLM), Shopier API, Google/Spotify OAuth 2.0</td></tr>
+    <tr><td>Yapay Zekâ &amp; Entegrasyon</td><td>OpenAI API, Ollama &amp; Qwen2.5 (yerel LLM), insan onaylı AI akışları, Webhook/Telegram Bot API, Shopier API, Google/Spotify OAuth 2.0</td></tr>
     <tr><td>IoT &amp; Protokoller</td><td>ESP32, MQTT, Kalman Filtreleme</td></tr>
     <tr><td>Diğer</td><td>RESTful API tasarımı, JWT Authentication, Git/GitHub, Swagger/OpenAPI</td></tr>
   </table>
@@ -65,11 +65,11 @@
   <div class="proj">
     <h3>API Insight Studio — Bitirme Projesi</h3>
     <ul>
-      <li>OpenAPI/Swagger tabanlı API'leri analiz eden, test eden ve otomatik belgeleyen çok platformlu (masaüstü ve web) bir sistem tasarladı ve geliştirdi.</li>
-      <li>BOLA (Broken Object Level Authorization) başta olmak üzere API güvenlik açıklarını otomatik tespit eden algoritmalar devreye aldı.</li>
-      <li>Ollama &amp; Qwen2.5 yerel yapay zekâ modellerini sisteme entegre ederek otomatik test senaryosu ve dinamik dokümantasyon üretimi sağladı.</li>
+      <li>OpenAPI/Swagger dokümanlarını kurallarla puanlayan, uyarıları imzalı webhook ve Telegram ile bildiren, test senaryolarını hedef API'ye karşı güvenle çalıştıran bir sistem (web ve isteğe bağlı masaüstü) tasarladı ve geliştirdi.</li>
+      <li>Yerel yapay zekâ modelini (Ollama &amp; Qwen2.5) yalnızca taslak yazacak şekilde konumlandırdı: taslak insan onayı olmadan yayımlanmaz; her adım hash zincirli bir denetim izine yazılır.</li>
+      <li>SSRF koruması, HMAC imzalı webhook, şifreli sır saklama ve sahiplik kontrolü (BOLA/IDOR) uyguladı; kural motorunu 29 örnekle, iki yerel modeli ise biçim doğruluğu açısından ölçtü; 782 testle doğruladı.</li>
     </ul>
-    <div class="tech">Teknolojiler: .NET 8 ASP.NET Core, Next.js, Electron, PostgreSQL/MSSQL, Ollama</div>
+    <div class="tech">Teknolojiler: .NET 8 ASP.NET Core, SQL Server, Next.js, Electron, Ollama, xUnit</div>
   </div>
 
   <div class="proj">

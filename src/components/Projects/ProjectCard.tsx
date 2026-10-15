@@ -11,7 +11,7 @@ function StatusTag({ project }: { project: Project }) {
 
   return (
     <div className="flex flex-wrap items-center gap-2 font-mono text-[11px] text-foreground-muted">
-      <span className="border border-border px-1.5 py-0.5">v1.0</span>
+      <span className="border border-border px-1.5 py-0.5">{project.version ?? "v1.0"}</span>
       {project.status ? (
         <span className="flex items-center gap-1.5">
           <span
@@ -60,8 +60,18 @@ export default function ProjectCard({ project }: { project: Project }) {
           </div>
         </div>
 
-        <div className="mt-auto pt-6">
+        <div className="mt-auto flex flex-wrap items-center justify-between gap-3 pt-6">
           <StatusTag project={project} />
+          {project.repoUrl ? (
+            <a
+              href={project.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs text-accent underline-offset-4 hover:underline"
+            >
+              GitHub&apos;da incele ↗
+            </a>
+          ) : null}
         </div>
       </article>
     );
